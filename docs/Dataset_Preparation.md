@@ -26,7 +26,7 @@ This represents an extreme class imbalance, which would likely harm the model's 
 
 **Patch Samples (64×64)**  
 ![Waldo Patch](Data_Examples/10_15_4.jpg)
-![NotWaldo Patch](Data_Examples/example_not_waldo.png)
+![NotWaldo Patch](Data_Examples/example_not_waldo.jpg)
 
 
 
