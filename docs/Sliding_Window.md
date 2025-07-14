@@ -106,4 +106,35 @@ Here, Waldo was detected in the **fifth-ranked** position, which resulted in a f
 - 🔴 **Missed detections**: `image9`, `image15`
 - ⚙️ **Manual red filter adjustments applied**: `image10`, `image12`
 
+## 6. Evaluation Results and Discussion
+
+Waldo was successfully detected in **86.7%** of the test cases.
+
+This result highlights not only the effectiveness of the sliding window approach combined with tuned parameters, but also the **robustness and consistency** of the model across different images.
+
+However, it is important to note that the validation set is relatively small, which limits our ability to confidently generalize this success rate to a broader, more diverse dataset.
+
+The only two images where Waldo was not detected (`image9` and `image15`) are visually complex and contain numerous distracting patterns that closely resemble Waldo’s outfit. This makes detection especially challenging—even for a human observer—and reveals the limitations of the current **patch-based detection** strategy.
+
+### Missed Cases
+
+- **`image9`**: Waldo was not detected, likely due to one or more of the following reasons:
+  1. The NMS algorithm prioritized overlapping predictions with slightly lower confidence, suppressing the true positive.
+  2. The stride may have been too large to properly cover the small region where Waldo’s head appears.
+
+- **`image15`**: Although the model **correctly detected Waldo in its patch**, the final ranking placed **14 false positives** above it. These false positives scored higher, leading to a missed detection in the final output.
+
+### Future Directions
+
+To improve detection accuracy and efficiency, a promising direction would be to integrate an **object detection model** to first propose candidate regions before applying the classifier. This could drastically reduce the number of sliding window evaluations needed.
+
+That said, *Where’s Waldo?* illustrations contain a **high density of small, visually similar elements**, which may cause traditional region proposal networks to underperform. Significant adaptation would be required to make such models effective in this highly specialized visual domain.
+
+Another promising line of improvement would be to explore **attention-based mechanisms**, which could allow the model to focus more on **where** Waldo might be located in the image, rather than strictly on **how** Waldo looks in isolated patches.
+
+Unlike sliding window approaches that exhaustively scan the image with fixed-size windows, attention algorithms can dynamically prioritize **regions of interest** based on contextual cues, visual saliency, or learned spatial patterns. This paradigm shift could enable the model to process the image more holistically, considering both local features and global layout when estimating the most likely locations of Waldo.
+
+By incorporating transformer-based architectures or visual attention modules, the system could learn to highlight regions that are more likely to contain human figures or clothing patterns similar to Waldo’s, without needing to evaluate every possible patch. This would not only reduce the computational cost but also help the model **disambiguate complex backgrounds** filled with distractors that resemble Waldo.
+
+Such techniques could complement or even replace the current exhaustive patch classification, offering a more **intelligent and efficient** approach to detection, particularly in high-resolution images with dense visual information like *Where’s Waldo?* scenes.
 
