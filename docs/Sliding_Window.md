@@ -58,7 +58,7 @@ Below are several examples of Waldo detection using the full pipeline:
 
 In the following example, Waldo is correctly detected in the **top-ranked** bounding box, with a confidence score above 0.95. 
 
-![Detection Success 1](Data_Examples/example_1.png)
+![Detection Success 1](Data_Examples/example.png)
 
 ---
 
