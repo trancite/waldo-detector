@@ -66,7 +66,7 @@ In the following example, Waldo is correctly detected in the **top-ranked** boun
 
 Here, Waldo is detected in the **second-ranked** prediction. 
 
-![Detection Success 2](Data Examples/example_3.png)
+![Detection Success 2](Data_Examples/example_3.png)
 
 ---
 
@@ -74,7 +74,7 @@ Here, Waldo is detected in the **second-ranked** prediction.
 
 Here, Waldo was detected in the **fifth-ranked** position, which resulted in a failure.
 
-![Detection Failure 1](Data Examples/example_4.png)
+![Detection Failure 1](Data_Examples/example_4.png)
 
 # ✅ Validation Results
 
