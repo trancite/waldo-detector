@@ -11,8 +11,7 @@ To locate Waldo in full-resolution images, we implemented a **sliding window det
 The detector systematically scans the original image using a fixed-size window that moves horizontally and vertically across the entire area.
 
 - The **base window size** is `64×64`, matching the patch size used during model training.
-- To detect Waldos of varying apparent sizes, we apply a **scale pyramid**: the window size is scaled (e.g., `64`, `96`, `128` pixels), while the image itself remains unchanged.
-- Each extracted patch is resized back to `64×64` before being passed to the model, preserving compatibility with the trained input format.
+- To detect Waldos of varying apparent sizes, we apply a **scale pyramid**: the window size is scaled (e.g., `64`, `32`, `43` pixels), while the image itself remains unchanged.
 
 > ⚠️ **Why scale the window and not the image?**  
 > Resizing the full image alters its visual structure (e.g., texture, edge sharpness, proportions), potentially confusing the model. Scaling only the window keeps the image intact while allowing multi-scale detection.
