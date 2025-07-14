@@ -106,7 +106,7 @@ Here, Waldo was detected in the **fifth-ranked** position, which resulted in a f
 - 🔴 **Missed detections**: `image9`, `image15`
 - ⚙️ **Manual red filter adjustments applied**: `image10`, `image12`
 
-## 6. Evaluation Results and Discussion
+## Evaluation Results and Discussion
 
 Waldo was successfully detected in **86.7%** of the test cases.
 
