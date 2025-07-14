@@ -39,7 +39,7 @@ The test set contains **1,074 images**, of which only **6** belong to the **wald
 
 To make a binary decision from model probabilities, we apply a threshold p:
 
-- If the predicted probability for **waldo** is greater than p = 0.4, classify the patch as **waldo**.
+- If the predicted probability for **waldo** is greater than p = 0.5, classify the patch as **waldo**.
 - Otherwise, classify it as **notwaldo**.
 
 This lower threshold helps **counteract the severe class imbalance**, making the model more sensitive to **waldo** cases.
