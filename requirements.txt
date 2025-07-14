@@ -1,0 +1,51 @@
+# ================================
+# Machine Learning / Deep Learning
+# ================================
+torch==2.7.1                  # PyTorch: core deep learning framework
+torchvision==0.22.1           # Image utilities and pretrained models for PyTorch
+scikit-learn==1.7.0           # Classical ML algorithms and evaluation tools
+numpy==2.2.6                  # Numerical computing (arrays, math)
+scipy==1.15.3                 # Scientific computing (stats, linear algebra)
+joblib==1.5.1                 # Efficient serialization (used in scikit-learn)
+
+# ====================
+# Image Processing
+# ====================
+Pillow==11.3.0                # Image loading, transformation, and saving
+matplotlib==3.10.3            # Plotting library for images, charts, etc.
+
+# ====================
+# FastAPI + ASGI Server
+# ====================
+fastapi==0.116.1              # Web API framework with async support
+uvicorn[standard]==0.35.0     # ASGI server to run FastAPI apps
+python-multipart==0.0.20      # Handles file uploads in FastAPI
+python-dotenv==1.1.1          # Load environment variables from .env files
+requests==2.32.4              # Simplified HTTP requests for Python clients
+
+# ====================
+# Progress Bars / Logs
+# ====================
+tqdm==4.67.1                  # Elegant progress bars (also in notebooks)
+rich==13.7.1                  # Pretty terminal output with colors, tables, etc.
+loguru==0.7.2                 # Modern logging with better syntax and features
+ipywidgets==8.1.2             # Interactive widgets for Jupyter (needed for tqdm)
+
+# ====================
+# Development & Jupyter
+# ====================
+notebook==7.4.4               # Classic Jupyter Notebook interface
+ipykernel==6.29.5             # IPython kernel (needed for notebooks)
+jupyterlab==4.4.4             # Next-gen Jupyter interface (optional but modern)
+
+# ====================
+# Typing / Validation
+# ====================
+pydantic==2.11.7              # Data validation and type enforcement (FastAPI uses it)
+typing_extensions==4.14.1     # Enables modern Python type hints for older versions
+
+# ====================
+# Miscellaneous Utilities
+# ====================
+python-dateutil==2.9.0.post0  # Date and time utilities (parsing, time zones)
+
