@@ -119,7 +119,12 @@ This project includes a **FastAPI** web application that exposes the Waldo detec
 
 The API is implemented in `src/main.py` and uses the trained model weights from `model/waldo_detector_64x64.pth`.  
 
-**Start the server locally:**
+**Start the server locally (requires FastAPI and Uvicorn installed in your Python environment):**
+
+## ⚠️ Note
+
+If you **don't have FastAPI or Uvicorn installed**, you **cannot run the API locally**.  
+Instead, go to the **Docker section** below to run the API in a container with all dependencies pre-installed.
 
 From the directory:
 
